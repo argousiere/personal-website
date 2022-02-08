@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "color": {
+      "type": "string",
+      "regex": "#([a-fA-F0-9]){6}",
+      "default": "#000000"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "name": {
+      "type": "uid",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
