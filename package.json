@@ -1,33 +1,16 @@
 {
-  "name": "seaberry",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Personal Website Headless CMS based on Strapi",
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website built with SvelteKit and Strapi.",
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
+    "start": "cd cms && yarn start",
+    "dev:client": "cd client && yarn dev",
+    "dev:cms": "cd cms && yarn develop",
+    "build:cms": "cd cms && yarn build",
+    "build:client": "cd client && yarn build"
   },
-  "devDependencies": {},
-  "dependencies": {
-    "@strapi/plugin-i18n": "4.0.7",
-    "@strapi/plugin-users-permissions": "4.0.7",
-    "@strapi/provider-upload-cloudinary": "^4.0.7",
-    "@strapi/strapi": "4.0.7",
-    "pg": "^8.7.3",
-    "pg-connection-string": "^2.5.0",
-    "sqlite3": "5.0.2"
-  },
-  "author": {
-    "name": "Jeanella Klarys Pascual"
-  },
-  "strapi": {
-    "uuid": "067a93f7-09bd-48b8-813f-30dde1382738"
-  },
-  "engines": {
-    "node": ">=12.x.x <=16.x.x",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+  "repository": "git@github.com:argousiere/personal-website.git",
+  "author": "Jeeka Pascual <dev@jeekapascual.com>",
+  "license": "MIT",
+  "private": false
 }
