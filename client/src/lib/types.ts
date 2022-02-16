@@ -1,13 +1,11 @@
 export interface Post {
-	id: number;
-  attributes: {
-    title: string;
-    slug: string;
-    description: string;
-    content: string;
-    created_at: string;
-    updated_at: string;
-  }
+  title: string;
+  slug: string;
+  description: string;
+  content: string;
+  date: string;
+  cover_url: string;
+  tags: string[];
 }
 
 export interface SearchResults<T> {

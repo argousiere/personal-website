@@ -12,5 +12,8 @@
   "repository": "git@github.com:argousiere/personal-website.git",
   "author": "Jeeka Pascual <dev@jeekapascual.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

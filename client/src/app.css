@@ -1,4 +1,303 @@
 /* Write your global styles here, in PostCSS syntax */
+@import "css.gg/icons/all";
+@import "normalize.css/normalize";
+@import url('http://fonts.cdnfonts.com/css/esteban');
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --spacing-0: 0;
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem;  /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem;   /* 16px */
+  --spacing-5: 1.5rem; /* 24px */
+  --spacing-6: 2rem;  /* 32px */
+  --spacing-7: 3rem; /* 48px */
+  --spacing-8: 4rem; /* 64px */
+  --spacing-9: 6rem; /* 96px */
+  --spacing-10: 8rem; /* 128px */
+  --spacing-11: 12rem; /* 192px */
+  --spacing-12: 16rem; /* 256px */
+
+  /* Font Sizes
+   * Calculated from https://type-scale.com/ at 1.25 scale
+   */
+  --font-size-1: 0.512rem; /* 8.192 */
+  --font-size-2: 0.64rem; /* 10.24px */
+  --font-size-3: 0.8rem; /* 12.8px */
+  --font-size-4: 1rem; /* 16px */
+  --font-size-5: 1.25rem; /* 20px */
+  --font-size-6: 1.563rem; /* 25px */
+  --font-size-7: 1.953rem; /* 31.24px */
+  --font-size-8: 2.441rem; /* 39.06 */
+  --font-size-9: 3.052rem; /* 48.83x */
+
+  --font-weight-normal: 400;
+  --font-weight-semibold: 500;
+
+  --baseline-height: 1.5;
+
+  --body-bg-color: #f5f5f5;
+  --body-text-color: #373042;
+
+  --heading-font-family: 'Esteban', serif;
+
+  --sidebar-bg-color: #1f2226;
+  --sidebar-text-color: #fafafa;
+
+  --menu-item-active-color: #ff829e;
+
+  --card-bg-color: #fafafa;
+  --card-border-radius: var(--spacing-0);
+  --card-border-color: lightgray;
+  --card-spacing-x: var(--spacing-5);
+  --card-spacing-y: var(--spacing-4);
+  --card-cover-placeholder-color: #d9e7ef;
+}
+
+body {
+  font-size: 16px;
+  line-height: var(--baseline-height);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: var(--font-weight-normal);
+  -webkit-font-smoothing: antialiased;
+  background: var(--body-bg-color);
+  color: var(--body-text-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+}
+
+ul, ol {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sidebar-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  margin: auto;
+  overflow-y: auto;
+}
+
+.sidebar, .main-content {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 500px;
+  flex-shrink: 0;
+  background-color: var(--sidebar-bg-color);
+  padding-left: 120px;
+  padding-right: var(--spacing-7);
+  column-gap: var(--spacing-5);
+  row-gap: var(--spacing-7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  color: var(--sidebar-text-color);
+}
+
+.sidebar header {
+  margin-top: var(--spacing-7);
+}
+
+.main-content {
+  padding: var(--spacing-7);
+  margin-left: 30%;
+  flex-grow: 1;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: var(--spacing-4);
+}
+
+.profile-name {
+  font-size: var(--font-size-6);
+  margin: 0;
+}
+
+.profile-subheading {
+  font-size: var(--font-size-4);
+  margin: 0;
+}
+
+.profile-blurb {
+  font-size: var(--font-size-3);
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: gray;
+}
+
+.menu {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.menu-item {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3);
+}
+
+.menu-link-active {
+  color: var(--menu-item-active-color);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+}
+
+.icon + .menu-label {
+  margin-left: var(--spacing-5);
+}
+
+.icon-label .icon + .label {
+  margin-left: var(--spacing-2);
+}
+
+.feed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  row-gap: var(--spacing-6);
+  column-gap: var(--spacing-6);
+}
+
+.feed-item {
+  flex-basis: 30%;
+  flex-shrink: 0;
+  height: 400px;
+}
+
+.feed-item .card {
+  height: 100%;
+}
+
+.feed-item:first-child {
+  flex-basis: calc(60% + var(--spacing-6));
+}
+
+.feed-item:first-child .card {
+  border-radius: 20px;
+}
+
+.feed-item:first-child .card-cover {
+  height: 60%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  background: var(--card-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.card-cover {
+  height: 160px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--card-cover-placeholder-color);
+}
+
+.card-cover .image {
+  width: 100%;
+  height: 100%;
+}
+
+.card-title {
+  font-size: var(--font-size-6);
+  margin: 1px 0;
+}
+
+.card-body,
+.card-footer {
+  padding: var(--card-spacing-y) var(--card-spacing-x);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+.card .tags {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: 3px;
+  border: 1px solid;
+  font-size: var(--font-size-3);
+}
+
+.tag + .tag {
+  margin-left: var(--spacing-3);
+}
