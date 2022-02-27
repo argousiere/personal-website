@@ -35,11 +35,15 @@
       <Image source="c_scale,h_206/v1645439476/profile_photo.jpg" alt="Profile avatar"></Image>
     </figure>
     <h1 class="profile-name">Jeanella Klarys Pascual</h1>
-    <h2 class="profile-subheading">Front-end Developer and Illustrator</h2>
+    <h2 class="profile-subheading">Front-end Developer & Illustrator</h2>
     <p class="profile-blurb">Waiting for the day her cerebellum returns from the nebulae, bloated with the answers to all her vexing, otherworldly questions.</p>
   </header>
 
   <nav>
     <Menu {items}></Menu>
   </nav>
+
+  <footer>
+    J. K. Pascual &copy; 2022. All rights reserved.
+  </footer>
 </aside>

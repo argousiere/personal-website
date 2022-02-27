@@ -15,16 +15,14 @@
 <ol class="menu">
   {#each items as item}
     <li class="menu-item">
+      {#if item.icon}
+        <Icon slug={item.icon}></Icon>
+      {/if}
       <a
-        class="menu-link"
+        class="menu-label link"
         href={item.url}
         class:menu-link-active={isActive(item.url)}>
-        {#if item.icon}
-          <Icon slug={item.icon}></Icon>
-        {/if}
-        <span class="menu-label">
-          {item.label}
-        </span>
+        {item.label}
       </a>
     </li>
   {/each}

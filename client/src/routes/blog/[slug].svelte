@@ -30,17 +30,27 @@ import Image from '$lib/components/Image.svelte';
   export let metadata;
 </script>
 
-<article class="card">
-  <div class="card-cover">
-    <Image source="{metadata.cover_url}" alt={metadata.title} />
-  </div>
+<article>
+  <header>
+    <div class="card-cover">
+      <Image source="{metadata.cover_url}" alt={metadata.title} />
+    </div>
+    <h1 class="card-title">{metadata.title}</h1>
+
+    <p class="card-description">
+      {#if metadata.description}
+        {metadata.description}
+      {/if}
+    </p>
+
+    <time>{new Date(metadata.date).toLocaleDateString()}</time>
+  </header>
   
   <div class="card-body">
-    <h1 class="card-title">{metadata.title}</h1>
     <svelte:component this={PostContent} />
   </div>
 
   <div class="card-footer">
-    <Tags tags={metadata.tags} />
+    Tagged In: <Tags tags={metadata.tags} />
   </div>
 </article>
