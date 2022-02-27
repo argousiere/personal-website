@@ -1,5 +1,7 @@
+import type { Post } from '$lib/types';
+
 const fetchPosts = async ({ offset = 0, limit = 10, tag = '' } = {}) => {
-  const posts = await Promise.all(
+  const posts: Post[] = await Promise.all(
     Object.entries(import.meta.glob('/posts/*.md')).map(async ([path, resolver]) => {
       const { metadata } = await resolver();
       const slug = path.split('/').pop().slice(0, -3);
@@ -7,7 +9,7 @@ const fetchPosts = async ({ offset = 0, limit = 10, tag = '' } = {}) => {
     })
   );
 
-  let sortedPosts = posts.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  let sortedPosts = posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   
   if (tag) {
     sortedPosts = sortedPosts.filter(post => post.tags.includes(tag));
