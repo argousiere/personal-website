@@ -2,6 +2,7 @@
 title: 'Visa Adventures: Finding An Employer'
 description: 
 date: 2016-03-28
+category: paperwork
 tags:
   - expat
   - france

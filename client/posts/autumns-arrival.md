@@ -3,6 +3,7 @@ title: Autumn's Arrival
 date: 2015-10-21
 description: My first week as an expat in France
 cover_url: 'blueberries.jpeg'
+category: reflection
 tags:
   - expat
   - france

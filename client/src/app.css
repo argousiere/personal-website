@@ -349,6 +349,12 @@ time {
   flex-wrap: wrap;
 }
 
+.category {
+  font-size: var(--font-size-3);
+  text-transform: uppercase;
+  margin: var(--spacing-4) 0;
+}
+
 .tag {
   display: inline-block;
   padding: var(--spacing-1) var(--spacing-3);

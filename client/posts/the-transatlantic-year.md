@@ -2,6 +2,7 @@
 title: The Transatlantic Year
 description:
 date: 2015-12-19
+category: reflection
 tags:
     - expat
     - france

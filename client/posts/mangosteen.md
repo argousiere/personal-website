@@ -2,6 +2,7 @@
 title: Mangosteen
 description: First entry about my first leap as an expat
 date: 2015-11-07
+category: artwork
 tags:
   - aquarelle
   - botanical-illustration

@@ -2,6 +2,7 @@
 title: In The Foyer of Reveries
 description: 
 date: 2015-12-03
+category: reflection
 tags:
     - aquarelle
     - botanical-illustration

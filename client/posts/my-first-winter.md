@@ -2,6 +2,7 @@
 title: My First Winter
 description: First entry about my first leap as an expat
 date: 2015-03-06
+category: reflection
 tags:
     - expat
     - france

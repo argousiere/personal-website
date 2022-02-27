@@ -2,6 +2,7 @@
 title: An Afternoon at Super Besse
 description: 
 date: 2016-03-13
+category: travel
 tags:
   - winter
   - france
