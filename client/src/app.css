@@ -1,8 +1,14 @@
 /* Write your global styles here, in PostCSS syntax */
-@import "css.gg/icons/all";
-@import "normalize.css/normalize";
-@import url('http://fonts.cdnfonts.com/css/esteban');
-@import url('http://fonts.cdnfonts.com/css/lato');
+@import 'css.gg/icons/all';
+@import 'normalize.css/normalize';
+@font-face {
+  font-family: 'Esteban';
+  src: url('/fonts/Esteban-Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Regular.ttf') format('ttf');
+}
 
 @tailwind base;
 @tailwind components;
@@ -86,7 +92,6 @@ h4,
 h5,
 h6 {
   font-weight: var(--font-weight-normal);
-  color: black;
 }
 
 p {
@@ -146,7 +151,7 @@ nav ol {
 .sidebar footer {
   font-size: var(--font-size-3);
   border-top: 1px solid var(--separator-color);
-  margin-top: 100%;
+  margin-top: auto;
 }
 
 .main-content {
