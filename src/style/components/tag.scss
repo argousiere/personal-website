@@ -1,0 +1,23 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as variables;
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 0;
+  row-gap: var(--spacing-4);
+  column-gap: var(--spacing-4);
+}
+
+.tag {
+  @include mixins.font-size('s');
+
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-3);
+  border: 1px solid;
+  background: #b7bfff;
+  box-shadow: variables.$shadow-1;
+}

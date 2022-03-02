@@ -1,0 +1,19 @@
+@use '../abstracts/mixins' as mixins;
+
+.menu {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.menu-link {
+}
+
+.menu-link-active {
+}

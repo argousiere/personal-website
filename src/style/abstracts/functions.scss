@@ -1,0 +1,5 @@
+@use './variables' as variables;
+
+@function vertical-rhythm($size: 1) {
+  @return calc(#{$size} * #{variables.$font-size-m});
+}

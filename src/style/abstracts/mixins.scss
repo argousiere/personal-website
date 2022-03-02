@@ -1,0 +1,36 @@
+@use 'variables' as variables;
+@use 'rfs/scss' as rfs;
+@use 'sass:map';
+
+@mixin anchor() {
+  border-bottom: 1px solid transparent;
+  transition: border 200ms ease-in-out;
+
+  &:hover {
+    @include anchor-active;
+  }
+}
+
+@mixin anchor-active() {
+  border-bottom-color: var(--link-underline-color);
+}
+
+@mixin card-horizontal() {
+  flex-direction: row;
+
+  .card-cover {
+    flex-basis: 30%;
+  }
+}
+
+@mixin animate-bounce() {
+  animation: bounce 0.9s infinite ease-in-out;
+}
+
+@mixin animate-press() {
+  transform: translate(2px, 2px);
+}
+
+@mixin font-size($name) {
+  @include rfs.font-size(map.get(variables.$font-sizes, $name));
+}

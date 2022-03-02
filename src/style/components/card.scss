@@ -1,0 +1,73 @@
+@use '../abstracts/functions' as functions;
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  border-radius: var(--card-border-radius);
+  column-gap: var(--spacing-7);
+  border: 1px solid transparent;
+
+  .feed-item & {
+    &:hover {
+      background: var(--card-hover-bg-color);
+      border-color: #cdbcb3;
+      
+      .card-cover .image {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .category {
+    margin: var(--spacing-4) 0;
+  }
+}
+
+.card-cover {
+  border: 1px solid #35312f;
+  box-shadow: variables.$shadow-1;
+  overflow: hidden;
+  background-color: var(--card-cover-placeholder-color);
+  flex-shrink: 0;
+  transition: all 300ms ease-in-out;
+  opacity: 1;
+  height: functions.vertical-rhythm(12);
+
+  .image {
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+  }
+}
+
+
+.card-title {
+  @include mixins.font-size('xl');
+
+  display: inline;
+  margin: 1px 0;
+  font-weight: var(--font-weight-normal);
+  text-align: center;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.card-footer {
+  flex-shrink: 0;
+}

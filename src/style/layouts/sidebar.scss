@@ -1,0 +1,115 @@
+@use '../abstracts/mixins' as mixins;
+
+.sidebar-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  margin: auto;
+  overflow-y: auto;
+  position: relative;
+}
+
+.sidebar,
+.main-content {
+  box-sizing: border-box;
+}
+
+.sidebar-content {
+  --link-underline-color: var(--sidebar-link-underline-color);
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  padding: var(--spacing-5) var(--spacing-5);
+  column-gap: var(--spacing-5);
+  row-gap: var(--spacing-7);
+  height: 100%;
+  width: var(--sidebar-width);
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  border-right: 1px solid #b89182;
+  background-image: linear-gradient(0deg, #f3dbd1 25%, #f0bebb 25%, #f0bebb 50%, #f3dbd1 50%, #f3dbd1 75%, #f0bebb 75%, #f0bebb 100%);
+  background-size: 16.00px 16.00px;
+
+  footer {
+    @include mixins.font-size('s');
+    
+    border-top: 1px solid var(--separator-color);
+    margin-top: auto;
+  }
+
+  .menu-item {
+    @include mixins.font-size('m');
+
+    background: var(--sidebar-menu-item-bg-color);
+    box-shadow: 3px 3px 0 0 #d0b4aa, 2px 2px #ffffff87 inset;
+    border: 1px solid #548483;
+    color: #3E4C4C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    .icon {
+      width: var(--spacing-5);
+
+      + .label-text {
+        margin-left: var(--spacing-5);
+      }
+    }
+    
+    + .menu-item {
+      margin-top: var(--spacing-4);
+    }
+
+    &:not(.menu-item-active):hover {
+      @include mixins.animate-press();
+
+      background-color: #86e6c6;
+      box-shadow: none;
+
+      .icon {
+        @include mixins.animate-bounce;
+      }
+    }
+  }
+
+  .menu-link {
+    padding: var(--spacing-2) var(--spacing-5);
+    width: 100%;
+  }
+
+  .menu-item-active {
+    background-color: #5ddad9;
+  }
+}
+
+.sidebar-toggle {
+  background: #cde9e7;
+  border: 1px solid #c2a7d7;
+  border-radius: 5px;
+  position: fixed;
+  top: var(--spacing-2);
+  left: var(--spacing-2);
+  z-index: 2000;
+
+  &:hover {
+    @include mixins.animate-bounce;
+  }
+
+  &:active {
+    @include mixins.animate-press;
+
+    background: #c2a7d7;
+  }
+
+  &:focus {
+    animation: none;
+  }
+}

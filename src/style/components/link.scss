@@ -1,0 +1,9 @@
+@use '../abstracts/mixins' as mixins;
+
+.link {
+  border-bottom: 2px dotted;
+
+  &:hover {
+    background-color: var(--card-hover-bg-color);
+  }
+}

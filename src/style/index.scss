@@ -1,0 +1,52 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+/* Write your global styles here, in PostCSS syntax */
+@use "normalize.css/normalize";
+@use "abstracts/animations";
+@use 'base';
+@use 'components';
+@use 'layouts';
+@use 'responsive';
+
+:root {
+  --spacing-0: 0;
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 0.75rem; /* 12px */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-5: 1.5rem; /* 24px */
+  --spacing-6: 2rem; /* 32px */
+  --spacing-7: 3rem; /* 48px */
+  --spacing-8: 4rem; /* 64px */
+  --spacing-9: 6rem; /* 96px */
+  --spacing-10: 8rem; /* 128px */
+  --spacing-11: 12rem; /* 192px */
+  --spacing-12: 16rem; /* 256px */
+
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+
+  --baseline-height: 1.5;
+
+  --body-bg-color: #f0e9e6;
+  --body-text-color: #2a2a2a;
+  --body-font-family: monospace;
+
+  --link-underline-color: #9d9d9d;
+
+  --sidebar-bg-color: #f3dbd1;
+
+  --sidebar-width: 300px;
+  --sidebar-collapse-width: 30px;
+  --sidebar-text-color: #473933;
+  --sidebar-menu-item-bg-color: #A7D0CD;
+  --sidebar-link-underline-color: #110d11;
+
+  --separator-color: #c9c9c9;
+
+  --card-hover-bg-color: #eadfda;
+  --card-coverplaceholder-color: #d9e7ef;
+}
+
+.image {
+  object-fit: cover;
+}

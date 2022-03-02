@@ -1,0 +1,19 @@
+@use '../abstracts/functions' as functions;
+
+.feed {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feed-item {
+  width: 100%;
+
+  + .feed-item {
+    margin-top: functions.vertical-rhythm(3);
+  }
+}
+
+.feed-item .card {
+  box-sizing: border-box;
+  padding: var(--spacing-2);
+}

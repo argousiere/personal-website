@@ -1,0 +1,7 @@
+@use '../abstracts/mixins' as mixins;
+
+.category {
+  @include mixins.font-size('s');
+
+  text-transform: uppercase;
+}
