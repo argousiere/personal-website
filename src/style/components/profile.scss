@@ -1,0 +1,30 @@
+@use '../abstracts/functions' as functions;
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: var(--spacing-4);
+}
+
+.profile-name {
+  font-size: var(--font-size-6);
+  margin: 0;
+}
+
+.profile-subheading {
+  font-size: var(--font-size-4);
+  margin: 0;
+}
+
+.profile-blurb {
+  font-size: var(--font-size-3);
+}
+
+.profile-photo {
+  width: functions.vertical-rhythm(10);
+  height: functions.vertical-rhythm(10);
+  overflow: hidden;
+  border-radius: 50%;
+}

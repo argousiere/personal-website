@@ -1,0 +1,29 @@
+@use 'sidebar';
+@use '../abstracts/functions' as functions;
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sidebar-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  margin: auto;
+  overflow-y: auto;
+  position: relative;
+}
+
+.sidebar,
+.main-content {
+  box-sizing: border-box;
+}
+
+.main-content {
+  padding: var(--spacing-7);
+  margin-left: var(--sidebar-width);
+  flex-grow: 1;
+}

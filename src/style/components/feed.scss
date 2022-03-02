@@ -1,0 +1,46 @@
+@use '../abstracts/functions' as functions;
+
+.feed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: stretch;
+  row-gap: var(--spacing-6);
+  list-style: none;
+}
+
+.feed-item {
+  flex-shrink: 0;
+  height: functions.vertical-rhythm(15);
+  width: 100%;
+}
+
+.feed-item .card {
+  height: 100%;
+  box-sizing: border-box;
+  padding: var(--spacing-2);
+}
+
+.feed-item:first-child {
+  height: functions.vertical-rhythm(25);
+  
+  + .feed-item {
+    margin-top: var(--spacing-5);
+  }
+
+  .card {
+    background-color: var(--blog-feature-bg-color);
+    column-gap: 0;
+    padding: var(--spacing-0);
+  }
+
+  .card-cover {
+    flex-basis: 60%;
+    border-radius: 0;
+  }
+  
+  .card-content {
+    padding: var(--spacing-3) var(--spacing-7);
+  }
+}

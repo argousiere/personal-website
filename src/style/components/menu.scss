@@ -1,0 +1,29 @@
+@use '../abstracts/mixins' as mixins;
+
+.menu {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-3);
+
+  .icon + .menu-link {
+    margin-left: 1em;
+  }
+}
+
+.menu-link {
+  @include mixins.anchor;
+}
+
+.menu-link-active {
+  @include mixins.anchor-active;
+}

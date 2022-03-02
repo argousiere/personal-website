@@ -1,0 +1,12 @@
+@mixin anchor() {
+  border-bottom: 1px solid transparent;
+  transition: border 200ms ease-in-out;
+
+  &:hover {
+    @include anchor-active;
+  }
+}
+
+@mixin anchor-active() {
+  border-bottom-color: var(--link-underline-color);
+}

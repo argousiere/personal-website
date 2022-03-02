@@ -1,0 +1,19 @@
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: 3px;
+  border: 1px solid;
+  font-size: var(--font-size-3);
+
+  + .tag {
+    margin-left: var(--spacing-3);
+  }
+}
