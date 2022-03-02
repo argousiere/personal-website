@@ -2,6 +2,7 @@
 title: In The Foyer of Reveries
 description: 
 date: 2015-12-03
+cover_url: c_scale,h_1146,q_100,w_1500/v1645439155/blog/blueberries.jpg
 category: reflection
 tags:
     - aquarelle
